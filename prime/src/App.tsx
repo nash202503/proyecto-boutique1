@@ -1,5 +1,5 @@
 import Carrusel from "./carrucel";
- 
+import iconoCarrito from './assets/carrito.png';
 // ============================================
 // TIPOS
 // ============================================
@@ -58,25 +58,21 @@ export default function App() {
       {/* ======================================
           NAVBAR
       ======================================= */}
-      <nav className="flex items-center justify-between px-10 py-4 bg-white shadow-sm sticky top-0 z-50">
-        {/* Logo con fuente cursiva (cargada en index.css) */}
-        <span className="text-3xl text-pink-600" style={{ fontFamily: "'Great Vibes', cursive" }}>
-          Boutique Belle Rose
-        </span>
- 
-        <div className="flex items-center gap-8">
-          {["Inicio", "Catálogo", "Promociones", "Contacto"].map((link) => (
-            <a
-              key={link}
-              href="#"
-              className="text-gray-800 font-bold text-sm hover:text-pink-600 transition-colors"
-            >
-              {link}
-            </a>
-          ))}
-          <span className="text-2xl cursor-pointer">🛒</span>
-        </div>
-      </nav>
+      <nav className="bar"> 
+        <h1 className="logotipo">Boutique Belle Rose</h1>
+        <ul className="lista">
+           <li><a href="#">Inicio</a></li> 
+           <li><a href="#">Catálogo</a></li>
+           <li><a href="#">Promociones</a></li>
+           <li><a href="#">Contacto</a></li>
+           
+           <li className="item-carrito">
+               <a href="#">
+                   <img src={iconoCarrito} alt="Carrito de compras" className="icono-carrito" />
+               </a>
+           </li>
+        </ul>
+    </nav>
  
       {/* ======================================
           CARRUSEL HERO
