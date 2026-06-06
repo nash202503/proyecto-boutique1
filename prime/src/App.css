@@ -19,3 +19,63 @@
   text-decoration: none;
   font-size: 18px;
 }
+
+/* CSS DEL NAVBAR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bar {
+    background-color: #ffffff; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8%;        
+    width: 100%;
+}
+
+.lista {
+    display: flex;
+    gap: 28px;                
+    list-style: none;
+    align-items: center;
+}
+
+.lista a {
+    color: #2b2b2b;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 16px;           
+    padding: 4px 0;           
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.2s ease;
+    display: inline-block;
+}
+
+.lista a:hover {
+    color: #ff03bc;
+    text-shadow: 
+        0 0 6px rgba(255, 3, 188, 0.8),  /* Brillo interno de la letra */
+        0 0 15px rgba(255, 3, 188, 0.5), /* Resplandor medio */
+        0 0 25px rgba(255, 105, 180, 0.3); /* Luz ambiental suave alrededor */
+        
+    /* Micro-animación: Un sutil estiramiento hacia arriba para que se sienta vivo al pasar el mouse */
+   transform: translateY(-1px) scale(1.02);
+}
+
+.icono-carrito {
+    width: 22px;               
+    height: auto;
+    display: block;
+}
+
+.logotipo {
+    font-family: 'Great Vibes', cursive;
+    color: #ff03bc;
+    font-size: 42px;           
+    font-weight: normal;
+    line-height: 0.2;          
+}
